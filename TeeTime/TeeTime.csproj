@@ -169,12 +169,27 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ClubProsController.cs" />
+    <Compile Include="Controllers\GolfClubsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610231501303_Initial.cs" />
+    <Compile Include="Migrations\201610231501303_Initial.Designer.cs">
+      <DependentUpon>201610231501303_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610231524163_Add clubs and Pros.cs" />
+    <Compile Include="Migrations\201610231524163_Add clubs and Pros.Designer.cs">
+      <DependentUpon>201610231524163_Add clubs and Pros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\ClubPro.cs" />
+    <Compile Include="Models\GolfClub.cs" />
+    <Compile Include="Models\GolfClubProsViewModel.cs" />
+    <Compile Include="Models\GolfClubProViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -236,6 +251,16 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\GolfClubs\Create.cshtml" />
+    <Content Include="Views\GolfClubs\Delete.cshtml" />
+    <Content Include="Views\GolfClubs\Details.cshtml" />
+    <Content Include="Views\GolfClubs\Edit.cshtml" />
+    <Content Include="Views\GolfClubs\Index.cshtml" />
+    <Content Include="Views\ClubPros\Create.cshtml" />
+    <Content Include="Views\ClubPros\Delete.cshtml" />
+    <Content Include="Views\ClubPros\Details.cshtml" />
+    <Content Include="Views\ClubPros\Edit.cshtml" />
+    <Content Include="Views\ClubPros\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -246,6 +271,14 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201610231501303_Initial.resx">
+      <DependentUpon>201610231501303_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610231524163_Add clubs and Pros.resx">
+      <DependentUpon>201610231524163_Add clubs and Pros.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

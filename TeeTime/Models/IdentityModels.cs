@@ -29,5 +29,9 @@ namespace TeeTime.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<TeeTime.Models.GolfClub> GolfClubs { get; set; }
+
+        public System.Data.Entity.DbSet<TeeTime.Models.ClubPro> ClubProes { get; set; }
     }
 }

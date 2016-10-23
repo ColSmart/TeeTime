@@ -1,0 +1,42 @@
+﻿@model TeeTime.Models.GolfClubProViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>@Model.Club.Name Club Professional Details</h2>
+
+<div>
+    <h4>ClubPro</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ClubPro.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClubPro.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClubPro.ContactNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClubPro.ContactNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClubPro.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClubPro.Email)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {id = Model.ClubPro.ClubProId}) |
+    @Html.ActionLink("Back to List", "Index", new { golfClubId = Model.Club.GolfClubId })
+</p>

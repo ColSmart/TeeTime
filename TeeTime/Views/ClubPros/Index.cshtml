@@ -1,0 +1,47 @@
+﻿@model TeeTime.Models.GolfClubProsViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Club Professionals for @Model.Club.Name</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ClubPro.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClubPro.ContactNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClubPro.Email)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model.ClubPros) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContactNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ClubProId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ClubProId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ClubProId })
+        </td>
+    </tr>
+}
+
+</table>
+
+<p>
+    @Html.ActionLink("Create New", "Create", new { GolfClubId = Model.Club.GolfClubId }) |
+    @Html.ActionLink("Back to " + Model.Club.Name, "Details", "GolfClubs", new {id = Model.Club.GolfClubId}, null)
+</p>

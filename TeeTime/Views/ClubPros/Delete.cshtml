@@ -1,0 +1,48 @@
+﻿@model TeeTime.Models.GolfClubProViewModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ClubPro</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ClubPro.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClubPro.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClubPro.ContactNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClubPro.ContactNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClubPro.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClubPro.Email)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index", new { golfClubId = Model.Club.GolfClubId })
+        </div>
+    }
+</div>
